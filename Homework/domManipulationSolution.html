@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>More DOM Manipulation</title>
+</head>
+
+<body>
+
+  <h1>About Me</h1>
+
+  <div class="profilePicture"></div>
+
+  <ul>
+    <li>Nickname: <span id="nickname"></span></li>
+    <li>Favorite Animal: <span id="favorite"></span></li>
+    <li>Hometown: <span id="hometown"></span></li>
+  </ul>
+
+  <div class="favoriteBooks"></div>
+    
+    <script>
+       //Changing the body font.
+  var body = document.querySelector("body");
+      body.style.fontFamily = "Arial, sans-serif";
+        
+      //Changing the List color and font.
+  var allList = document.querySelectorAll("li"); 
+  for(var i = 0; i < allList.length; i++){
+      var newColor = allList[i];
+      newColor.setAttribute("class", "listitem");
+      newColor.style.color = "rebeccapurple";
+  }
+     //Changing Span 
+  var chaningInfo = document.querySelector("#nickname");
+        chaningInfo.innerText = "Sosaty.";
+  var chaningInfo2 = document.querySelector("#favorite");
+        chaningInfo2.innerText = "Cats!";
+  var chaningInfo3 = document.querySelector("#hometown");
+        chaningInfo3.innerText = "Jeddah.";
+        
+    //Creating an image 
+  var image = document.createElement("img");
+        image.setAttribute("src", "https://source.unsplash.com/200x200");
+  var pic = document.querySelector(".profilePicture");
+        pic.append(image);
+  
+    //Book List    
+  var books = [
+  {
+    title: "The Design of Everyday Things",
+    author: "Don Norman",
+    alreadyRead: false
+  },
+  {
+    title: "The Most Human Human",
+    author: "Brian Christian",
+    alreadyRead: true
+  },
+  {
+    title: "In Search of Lost Time",
+    author: "Marcel Proust",
+    alreadyRead: true
+  },
+  {
+    title: "Ulysses",
+    author: "James Joyce",
+    alreadyRead: true
+  },
+  {
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    alreadyRead: true
+  }
+];
+    //Creating a heading & Book List
+  var head = document.createElement("h1");
+  head.innerText = "My Book List"; 
+        
+  var book = document.querySelector("div.favoriteBooks");
+  book.append(head);
+        
+  for(var i = 0; i < books.length; i++){
+      var newPar = document.createElement("p");
+      newPar.innerText = books[i].title + ", by " + books[i].author;
+      book.append(newPar);
+  }
+       
+</script>
+
+</body>
+
+</html>
