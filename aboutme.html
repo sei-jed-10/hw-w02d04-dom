@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>More DOM Manipulation</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+$(document).ready(function(){
+      var my_css_class = {"font-family" : "Arial, sans-serif"};
+      var liCssClass = {"color" : "rebeccapurple"};
+      $("body").css(my_css_class);
+      $("#nickname").append("Sneezy");
+      $("#favorite").append("Cats");
+      $("#hometown").append("Jeddah");
+      $("li").addClass("listitem");
+      $("li").css(liCssClass);
+      $(".profilePicture").append("<img src=profile.JPG>");
+    });
+  </script>
+
+</head>
+
+<body>
+
+  <h1>About Me</h1>
+
+  <div class="profilePicture"></div>
+
+  <ul>
+    <li>Nickname: <span id="nickname"></span></li>
+    <li>Favorite Animal: <span id="favorite"></span></li>
+    <li>Hometown: <span id="hometown"></span></li>
+  </ul>
+
+  <div class="favoriteBooks"></div>
+
+</body>
+
+</html>
+
+<!-- // - Create a JavaScript file, and link it up
+// - Using JavaScript:
+
+//   - Change the font-family of the page to `"Arial, sans-serif"`
+//   - Replace each of the `span` tags (nickname, favorite, hometown) with your own information (e.g. put your nickname in the nickname span)
+//   - Give each `li` the class of `"listitem"`
+//   - Change each `li`'s text color to `"rebeccapurple"`
+//   - Create a new `img` element and set its `src` attribute to a picture of you. Put that new `img` element in the div with the class of `"profilePicture"` -->
