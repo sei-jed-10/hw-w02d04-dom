@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="JQueryLibrary.js"></script>
+  <title>More DOM Manipulation</title>
+
+<!--Intially making the image not appearing.-->
+<style>
+
+.profilePicture
+{
+
+    display:none;
+    
+}
+</style>
+
+  <script>
+
+    $(document).ready(function(){
+      $("button").click(function()
+      {
+        $(".profile").css({"font-family": "Arial, sans-serif"});
+        $("#nickname").text('Leena');
+        $("#favorite").text('penguin');
+        $("#hometown").text('Jeddah');
+        $(".listitem").css('color','rebeccapurple');
+        $(".profilePicture").show();
+    // attempted to add a pagaragraph with all favorite books, but it isnt looping for some reason..
+        $(".favoriteBooks").append(favBooks)
+       
+        
+   
+    });
+      
+
+    });
+
+  
+  </script>
+
+
+
+</head>
+
+<body>
+<!--Created a button to make changes into it.-->
+    <button>Change values</button>
+
+<!--Created a new div with class profile to make changes into it.-->
+
+  <div class="profile">
+    <h1>About Me</h1>
+
+ <!--Adjusted list to class of "listitem-->
+  <ul>
+    <li class = listitem>Nickname: <span id="nickname"></span></li>
+    <li class = listitem>Favorite Animal: <span id="favorite"></span></li>
+    <li class = listitem>Hometown: <span id="hometown"></span></li>
+  </ul>
+</div>
+
+<div class="profilePicture">
+    <img src = "https://png.pngtree.com/png-clipart/20190619/original/pngtree-anime-animal-animal-decoration-cartoon-animation-anime-png-image_3968878.jpg" height="300" width="300">
+</div>
+
+
+ <!--Adjusted script into div with class favoriteBooks-->
+ 
+
+  <div class="favoriteBooks">
+        <script>
+                var books = [
+                  {
+                       title: "The Design of Everyday Things",
+                       author: "Don Norman",
+                       alreadyRead: false
+                   },
+                   {
+                       title: "The Most Human Human",
+                       author: "Brian Christian",
+                       alreadyRead: true
+                   },
+                   {
+                       title: "In Search of Lost Time",
+                       author: "Marcel Proust",
+                       alreadyRead: true
+                   },
+                   {
+                       title: "Ulysses",
+                       author: "James Joyce",
+                       alreadyRead: true
+                   },
+                   {
+                      title: "The Great Gatsby",
+                      author: "F. Scott Fitzgerald",
+                      alreadyRead: true
+                   }
+                           ];
+      
+      for (const i in books)
+      
+      {
+          if(books[i].alreadyRead == true)
+          {
+          
+              var favBooks = (books[i].title + " by "+ books[i].author);
+          }
+
+          
+      }
+              
+              </script>
+ 
+
+
+  </div>
+
+</body>
+
+</html>

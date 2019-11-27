@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="JQueryLibrary.js"></script>
+
+  
+
+  <title>Document</title>
+<!--Intially not displaying the imamge using display:none-->
+<style>
+.image
+{
+ display:none;
+}
+</style>
+<!--Using Jquery with click button by identity and show function by class image.-->
+<script>
+    $(document).ready(function(){
+      $("#randomize").click(function()
+      {
+        $(".image").show();
+        
+      });
+
+      
+    });
+</script>
+
+
+</head>
+
+<body>
+
+  <div>
+    <label>
+      Width:
+      <input type="number" class="width" />
+    </label>
+    <label>
+      Height:
+      <input type="number" class="height" />
+    </label>
+    <button id="randomize">Get random image!</button>
+        
+  </div>
+
+  <div class="image">
+    <img src ="https://source.unsplash.com/random.png">
+  </div>
+
+</body>
+
+</html>
