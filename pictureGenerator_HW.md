@@ -10,7 +10,18 @@ Start of with the following HTML:
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <script src="js/jquery.min.js"></script>
   <title>Document</title>
+  <script>
+  $(document).ready(function(){
+    $("#image").hide()
+  $("#ransomize").click(function(){
+    $("#image").show();
+  });
+});
+
+</scrpit>
 </head>
 
 <body>
@@ -27,7 +38,7 @@ Start of with the following HTML:
     <button id="randomize">Get random image!</button>
   </div>
 
-  <div class="image"></div>
+  <div class="image"><img src="https://source.unsplash.com/1600x900" ></div>
 
 </body>
 
