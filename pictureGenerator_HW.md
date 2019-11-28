@@ -20,7 +20,7 @@ Start of with the following HTML:
       Width:
       <input type="number" class="width" />
     </label>
-    <label>
+    <label>   
       Height:
       <input type="number" class="height" />
     </label>
@@ -47,7 +47,7 @@ Start of with the following HTML:
 Allow the user to select the width and the height!
 
 ### Bonus 2
-
+ 
 Allow the user to select where their image comes from using a dropdown
 
 Suggested options:
