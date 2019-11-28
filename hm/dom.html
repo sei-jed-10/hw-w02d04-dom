@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="book.css">
+  <title>More DOM Manipulation</title>
+</head>
+
+<body>
+
+  <h1>About Me</h1>
+
+  <div class="profilePicture"></div>
+
+  <ul>
+    <li>Nickname: <span id="nickname"></span></li>
+    <li>Favorite Animal: <span id="favorite"></span></li>
+    <li>Hometown: <span id="hometown"></span></li>
+  </ul>
+
+  <div class="favoriteBooks"></div>
+    
+    
+    <script>
+    var body = document.querySelector("body");
+      body.style.fontFamily = "Arial, sans-serif";
+        
+    var key = document.querySelector("#nickname");
+        key.innerText= "ban";
+        
+        var key = document.querySelector("#favorite");
+        key.innerText= "cat";
+        
+        var key = document.querySelector("#hometown");
+        key.innerText= "jeddah";
+        
+        
+        
+        var list = document.querySelectorAll("li");
+        for(var i=0; i< list.length; i++){
+            var ls = list[i];
+            ls.style.color= "rebeccapurple";
+            ls.setAttribute("class", "listitem");
+            
+        }
+        
+    var newImage = document.createElement("img");
+        newImage.setAttribute("src","https://image.shutterstock.com/image-photo/mountains-during-sunset-beautiful-natural-260nw-407021107.jpg");
+  
+        var picture = document.querySelector(".profilePicture");
+        picture.append(newImage);
+        
+        
+         var books = [
+  {
+    title: "The Design of Everyday Things",
+    author: "Don Norman",
+    alreadyRead: false
+  },
+  {
+    title: "The Most Human Human",
+    author: "Brian Christian",
+    alreadyRead: true
+  },
+  {
+    title: "In Search of Lost Time",
+    author: "Marcel Proust",
+    alreadyRead: true
+  },
+  {
+    title: "Ulysses",
+    author: "James Joyce",
+    alreadyRead: true
+  },
+  {
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    alreadyRead: true
+  }
+];
+        
+var lib = document.createElement("h1");
+ lib.innerText = "My Book List";
+  var newHead = document.querySelector("div.favoriteBooks");
+  newHead.append(lib);
+  for(var i = 0; i < books.length; i++){
+      var newBook = document.createElement("p");
+      newBook.innerText = books[i].title + " , by" + books[i].author;
+      newHead.append(newBook);}
+    </script>
+
+</body>
+
+</html>
