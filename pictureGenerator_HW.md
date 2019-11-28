@@ -9,6 +9,7 @@ Start of with the following HTML:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="JQuery.js"></script>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
@@ -32,6 +33,7 @@ Start of with the following HTML:
 </body>
 
 </html>
+<!---
 ```
 
 - Create and link a JavaScript file
@@ -56,3 +58,4 @@ Suggested options:
 - [Fill Murray](http://www.fillmurray.com/)
 - [Place Cage](http://www.placecage.com/)
 - [Lorem Flickr](https://loremflickr.com/)
+-->

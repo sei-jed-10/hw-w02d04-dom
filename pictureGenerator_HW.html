@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="JQuery.js"></script>
+<script>
+$(document).ready(function(){
+  $("#randomize").click(function(){
+    var img = $('<img id="dynamic">'); 
+    img.attr('src', "https://source.unsplash.com/random");
+
+    x = $(".width").val();
+    img.css("width", x);
+
+    y = $(".height").val();
+    img.css("height", y);
+
+    img.appendTo('.image');
+
+  });
+  $("#Picsum").click(function(){
+    var img = $('<img id="dynamic">'); 
+    img.attr('src', "https://picsum.photos/200/300");
+
+    x = $(".width").val();
+    img.css("width", x);
+
+    y = $(".height").val();
+    img.css("height", y);
+
+    img.appendTo('.image');
+
+  });
+
+  $("#FillMurray").click(function(){
+    var img = $('<img id="dynamic">'); 
+    img.attr('src', "https://fillmurray.com/200/300");
+
+    x = $(".width").val();
+    img.css("width", x);
+
+    y = $(".height").val();
+    img.css("height", y);
+
+    img.appendTo('.image');
+
+  });
+
+  $("#PlaceCage").click(function(){
+    var img = $('<img id="dynamic">'); 
+    img.attr('src', "https://www.placecage.com/200/300");
+
+    x = $(".width").val();
+    img.css("width", x);
+
+    y = $(".height").val();
+    img.css("height", y);
+
+    img.appendTo('.image');
+
+  });
+
+  $("#LoremFlickr").click(function(){
+    var img = $('<img id="dynamic">'); 
+    img.attr('src', "https://loremflickr.com/320/240");
+
+    x = $(".width").val();
+    img.css("width", x);
+
+    y = $(".height").val();
+    img.css("height", y);
+
+    img.appendTo('.image');
+
+  });
+});
+</script>
+</head>
+<body>
+
+<div></div>
+    <label>
+      Width:
+      <input type="number" class="width" />
+    </label>
+    <label>
+      Height:
+      <input type="number" class="height" />
+    </label>
+    <button id="randomize">Get random image!</button>
+    <button id="Picsum">Get random image from Picsum!</button>
+    <button id="FillMurray">Get random image from FillMurray!</button>
+    <button id="PlaceCage">Get random image from Place Cage!</button>
+    <button id="LoremFlickr">Get random image from Lorem Flickr!</button>
+
+  </div>
+
+  <div class="image" ></div>
+
+</body>
+</html>
