@@ -1,13 +1,17 @@
 
 
-$(document).ready(function(){
+$('document').ready(function(){
 	
 	$('#randomize').click(function(){
 		
-		$('.img').after("src","https://source.unsplash.com/random");
 
+		var img = $('<img id = "dynamic">');
+		//img.src = "https://source.unsplash.com/random";
+		
+		//$('.image').appendChild(img);
+
+		img.attr('src',"https://source.unsplash.com/random");
+		img.appendTo('.image');
 	});
 
 });
-
-//<img src= "https://source.unsplash.com/random" width ="490" hieght="736">
